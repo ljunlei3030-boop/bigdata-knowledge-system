@@ -5,7 +5,6 @@ export default defineConfig({
   title: '大数据技术知识体系',
   description: '从技术问题到系统化理解',
   lastUpdated: true,
-  cleanUrls: true,
   markdown: {
     theme: {
       light: 'github-light',

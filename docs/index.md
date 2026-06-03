@@ -36,7 +36,7 @@ hero:
     <p>沉淀批计算、流计算和 OLAP 查询引擎的执行原理。</p>
     <span class="tag">Spark</span><span class="tag">Flink</span><span class="tag">ClickHouse / ByteHouse</span><span class="tag">MapReduce</span>
   </a>
-  <a class="knowledge-card" href="./lakehouse/kafka-flink-paimon-spark-bytehouse">
+  <a class="knowledge-card" href="./lakehouse/kafka-flink-paimon-spark-bytehouse.html">
     <h3>湖仓一体</h3>
     <p>把实时入湖、离线加工、多引擎查询和治理能力串起来。</p>
     <span class="tag">Paimon</span><span class="tag">存算分离</span><span class="tag">元数据映射</span><span class="tag">多引擎查询</span>
@@ -66,19 +66,19 @@ hero:
 ## 学习路径
 
 <div class="path-grid">
-  <a class="path-card" href="./compute/spark-execution-flow">
+  <a class="path-card" href="./compute/spark-execution-flow.html">
     <h3>路径一：Spark 执行原理</h3>
     <p>Spark SQL → Catalyst → DAG → Stage → Task → Executor → Shuffle → 结果输出</p>
   </a>
-  <a class="path-card" href="./lakehouse/kafka-flink-paimon-spark-bytehouse">
+  <a class="path-card" href="./lakehouse/kafka-flink-paimon-spark-bytehouse.html">
     <h3>路径二：湖仓一体架构</h3>
     <p>Kafka → Flink CDC → Paimon → Spark → ByteHouse → DolphinScheduler → 数据治理</p>
   </a>
-  <a class="path-card" href="./guide/learning-path">
+  <a class="path-card" href="./guide/learning-path.html">
     <h3>路径三：数据建模与治理</h3>
     <p>数据域 → ODS → DWD → DWS → ADS → 指标体系 → 元数据 → 血缘 → 质量校验</p>
   </a>
-  <a class="path-card" href="./compute/spark-skew">
+  <a class="path-card" href="./compute/spark-skew.html">
     <h3>路径四：性能问题排查</h3>
     <p>SQL 慢 → 执行计划 → Spark UI → Shuffle → 数据倾斜 → GC / OOM → 参数优化</p>
   </a>
@@ -87,32 +87,32 @@ hero:
 ## 问题库入口
 
 <ul class="question-list">
-  <li><a href="./questions/spark-data-skew">Spark 为什么会发生数据倾斜？</a></li>
-  <li><a href="./questions/broadcast-join-why-fast">小表广播 Join 为什么快？</a></li>
-  <li><a href="./questions/distinct-vs-group-by">distinct 和 group by 有什么区别？</a></li>
-  <li><a href="./questions/clickhouse-single-table-fast">ClickHouse 查询单表为什么快？</a></li>
-  <li><a href="./questions/paimon-spark-vs-clickhouse">Paimon + Spark 查询和 ClickHouse 查询效率差异在哪里？</a></li>
-  <li><a href="./optimization/gc">Executor 频繁 GC 怎么排查？</a></li>
-  <li><a href="./optimization/driver-oom">Driver OOM 常见原因有哪些？</a></li>
-  <li><a href="./questions/data-governance-flow">数据治理在整个数据流程中做了什么？</a></li>
+  <li><a href="./questions/spark-data-skew.html">Spark 为什么会发生数据倾斜？</a></li>
+  <li><a href="./questions/broadcast-join-why-fast.html">小表广播 Join 为什么快？</a></li>
+  <li><a href="./questions/distinct-vs-group-by.html">distinct 和 group by 有什么区别？</a></li>
+  <li><a href="./questions/clickhouse-single-table-fast.html">ClickHouse 查询单表为什么快？</a></li>
+  <li><a href="./questions/paimon-spark-vs-clickhouse.html">Paimon + Spark 查询和 ClickHouse 查询效率差异在哪里？</a></li>
+  <li><a href="./optimization/gc.html">Executor 频繁 GC 怎么排查？</a></li>
+  <li><a href="./optimization/driver-oom.html">Driver OOM 常见原因有哪些？</a></li>
+  <li><a href="./questions/data-governance-flow.html">数据治理在整个数据流程中做了什么？</a></li>
 </ul>
 
 ## 实战案例入口
 
 <div class="knowledge-grid">
-  <a class="knowledge-card" href="./cases/spark-slow-sql">
+  <a class="knowledge-card" href="./cases/spark-slow-sql.html">
     <h3>Spark SQL 运行缓慢排查</h3>
     <p>从执行计划、Stage 耗时、Shuffle 和资源利用率定位慢 SQL。</p>
   </a>
-  <a class="knowledge-card" href="./cases/spark-gc-high">
+  <a class="knowledge-card" href="./cases/spark-gc-high.html">
     <h3>Executor 频繁 GC 排查</h3>
     <p>结合内存、对象膨胀、缓存和 Shuffle 落盘分析 GC 问题。</p>
   </a>
-  <a class="knowledge-card" href="./cases/join-data-explosion">
+  <a class="knowledge-card" href="./cases/join-data-explosion.html">
     <h3>Join 后数据量暴增排查</h3>
     <p>从主键唯一性、关联条件和维度表粒度定位数据膨胀。</p>
   </a>
-  <a class="knowledge-card" href="./cases/data-quality-backtracking">
+  <a class="knowledge-card" href="./cases/data-quality-backtracking.html">
     <h3>数据质量异常回溯</h3>
     <p>沿采集、入湖、加工、服务和使用链路定位质量异常源头。</p>
   </a>
