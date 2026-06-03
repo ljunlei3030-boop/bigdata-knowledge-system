@@ -1,0 +1,116 @@
+:root {
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #0d9488;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(20, 184, 166, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0f766e, #2563eb);
+}
+
+.dark {
+  --vp-c-brand-1: #5eead4;
+  --vp-c-brand-2: #2dd4bf;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(45, 212, 191, 0.16);
+}
+
+.VPDoc .content-container {
+  max-width: 920px !important;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.82;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+.knowledge-grid,
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 20px 0 28px;
+}
+
+.knowledge-card,
+.path-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.knowledge-card:hover,
+.path-card:hover {
+  border-color: var(--vp-c-brand-2);
+  transform: translateY(-2px);
+  background: var(--vp-c-brand-soft);
+}
+
+.knowledge-card h3,
+.path-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.knowledge-card p,
+.path-card p {
+  margin: 0 0 12px;
+  color: var(--vp-c-text-2);
+}
+
+.knowledge-card ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.question-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.question-list li {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin: 4px 6px 4px 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flow-line {
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .knowledge-grid,
+  .path-grid,
+  .question-list {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-card,
+  .path-card {
+    padding: 15px;
+  }
+}
