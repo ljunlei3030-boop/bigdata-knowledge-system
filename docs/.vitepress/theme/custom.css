@@ -18,6 +18,30 @@
   max-width: 920px !important;
 }
 
+.VPHomeHero .container {
+  padding-bottom: 34px;
+}
+
+.VPHomeHero .main {
+  max-width: 760px !important;
+}
+
+.VPHomeHero .name,
+.VPHomeHero .text {
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.VPHomeHero .text {
+  max-width: 760px;
+  font-size: clamp(38px, 5vw, 58px);
+}
+
+.VPHomeHero .tagline {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
 .vp-doc p,
 .vp-doc li {
   line-height: 1.82;
@@ -26,6 +50,59 @@
 .vp-doc table {
   display: table;
   width: 100%;
+}
+
+.section-intro {
+  margin-top: -2px;
+  color: var(--vp-c-text-2);
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.2fr) repeat(2, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.entry-card {
+  display: block;
+  min-height: 190px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.entry-card:hover {
+  border-color: var(--vp-c-brand-2);
+  transform: translateY(-2px);
+  background: var(--vp-c-brand-soft);
+}
+
+.primary-entry {
+  border-color: rgba(15, 118, 110, 0.34);
+  background:
+    linear-gradient(135deg, rgba(20, 184, 166, 0.16), rgba(37, 99, 235, 0.08)),
+    var(--vp-c-bg-soft);
+}
+
+.entry-kicker {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.entry-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.entry-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
 }
 
 .knowledge-grid,
@@ -38,6 +115,7 @@
 
 .knowledge-card,
 .path-card {
+  display: block;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 18px;
@@ -102,7 +180,35 @@
   font-size: 14px;
 }
 
+.mermaid {
+  margin: 20px 0 26px;
+  padding: 18px;
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  text-align: center;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 640px) {
+  .VPHomeHero .container {
+    padding-top: 34px;
+    padding-bottom: 18px;
+  }
+
+  .VPHomeHero .text {
+    font-size: 36px;
+  }
+
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+
   .knowledge-grid,
   .path-grid,
   .question-list {

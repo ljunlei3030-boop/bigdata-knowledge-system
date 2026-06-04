@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: 大数据技术知识体系
-  text: 从技术问题到系统化理解
-  tagline: 围绕数据采集、湖仓一体、Spark/Flink 计算、数据建模、数据治理和性能优化构建的个人技术知识库。
+  text: 从问题到体系化理解
+  tagline: 面向大数据平台建设、性能排查和知识沉淀的个人技术知识库。
   actions:
     - theme: brand
       text: 开始阅读
@@ -16,9 +16,31 @@ hero:
 
 # 技术知识地图
 
-这是一个围绕数据采集、湖仓一体、Spark/Flink 计算、数据建模、数据治理和性能优化构建的个人技术知识库。目标不是简单记录答案，而是把每个技术点放入完整的数据平台知识体系中，形成可复用、可关联、可持续更新的技术地图。
+这个网站把数据采集、湖仓一体、Spark/Flink 计算、数据建模、数据治理和性能优化放到同一张知识地图中。目标不是简单记录答案，而是把每个技术点放入完整的数据平台链路里，形成可复用、可关联、可持续更新的技术体系。
+
+## 推荐入口
+
+<div class="entry-grid">
+  <a class="entry-card primary-entry" href="./guide/learning-path.html">
+    <span class="entry-kicker">系统学习</span>
+    <h3>按学习路径建立主线</h3>
+    <p>适合从零梳理大数据技术栈，先建立数据链路、计算引擎、湖仓架构和治理能力之间的关系。</p>
+  </a>
+  <a class="entry-card" href="./questions/">
+    <span class="entry-kicker">问题排查</span>
+    <h3>从真实问题反推原理</h3>
+    <p>适合遇到 SQL 慢、数据倾斜、GC、OOM、Join 膨胀等问题时快速定位分析路径。</p>
+  </a>
+  <a class="entry-card" href="./cases/">
+    <span class="entry-kicker">实战复盘</span>
+    <h3>用案例沉淀排查方法</h3>
+    <p>适合把项目中的异常、优化和治理经验整理成可复用的方法论。</p>
+  </a>
+</div>
 
 ## 技术地图
+
+<p class="section-intro">先按数据平台链路理解每个模块的位置，再进入具体专题。</p>
 
 <div class="knowledge-grid">
   <a class="knowledge-card" href="./collection/">
@@ -65,6 +87,8 @@ hero:
 
 ## 学习路径
 
+<p class="section-intro">四条路径对应四种常见目标：理解引擎、搭建湖仓、建设模型、排查性能。</p>
+
 <div class="path-grid">
   <a class="path-card" href="./compute/spark-execution-flow.html">
     <h3>路径一：Spark 执行原理</h3>
@@ -86,6 +110,8 @@ hero:
 
 ## 问题库入口
 
+<p class="section-intro">把常见面试题和线上排障问题放到同一套分析框架里。</p>
+
 <ul class="question-list">
   <li><a href="./questions/spark-data-skew.html">Spark 为什么会发生数据倾斜？</a></li>
   <li><a href="./questions/broadcast-join-why-fast.html">小表广播 Join 为什么快？</a></li>
@@ -98,6 +124,8 @@ hero:
 </ul>
 
 ## 实战案例入口
+
+<p class="section-intro">每个案例都围绕现象、定位、原因、处理方案和沉淀经验展开。</p>
 
 <div class="knowledge-grid">
   <a class="knowledge-card" href="./cases/spark-slow-sql.html">
@@ -118,6 +146,6 @@ hero:
   </a>
 </div>
 
-## 总结输出
+## 持续更新方向
 
-这个网站的第一版已经把大数据技术知识拆成技术地图、学习路径、问题库、技术专题和实战案例五类入口。后续新增内容时，可以继续沿着“技术点解释、问题沉淀、案例复盘、关联知识”的方式扩展，让零散经验逐步沉淀为系统化知识体系。
+后续内容会继续沿着“技术点解释、问题沉淀、案例复盘、关联知识”的方式扩展。每新增一个专题，都会尽量补齐它在数据链路中的位置、底层原理、典型场景、常见问题和相关案例。
