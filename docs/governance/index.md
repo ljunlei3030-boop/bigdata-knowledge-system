@@ -65,6 +65,7 @@ flowchart LR
 
 ## 9. 关联知识
 
+- [数据治理怎么落地推进？](/governance/data-governance-process)
 - [元数据管理](/governance/metadata)
 - [血缘分析](/governance/lineage)
 - [数据质量](/governance/quality)

@@ -35,6 +35,7 @@ ODS、DWD、DWS、ADS 分层建设，主题域模型建设，宽表设计。
 ## 9. 关联知识
 
 - [ODS / DWD / DWS / ADS](/modeling/ods-dwd-dws-ads)
+- [变化维表字段要不要沉淀到 DWS？](/modeling/dws-changing-dimension)
 - [数据治理流程](/governance/)
 
 ## 总结输出

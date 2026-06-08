@@ -121,6 +121,8 @@ hero:
   <li><a href="./optimization/gc.html">Executor 频繁 GC 怎么排查？</a></li>
   <li><a href="./optimization/driver-oom.html">Driver OOM 常见原因有哪些？</a></li>
   <li><a href="./questions/data-governance-flow.html">数据治理在整个数据流程中做了什么？</a></li>
+  <li><a href="./governance/data-governance-process.html">数据治理怎么落地推进？</a></li>
+  <li><a href="./modeling/dws-changing-dimension.html">变化维表字段要不要沉淀到 DWS？</a></li>
 </ul>
 
 ## 实战案例入口

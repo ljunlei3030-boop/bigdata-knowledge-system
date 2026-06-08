@@ -71,6 +71,7 @@ const modelingSidebar = {
     { text: '数据建模概览', link: '/modeling/' },
     { text: 'ODS / DWD / DWS / ADS', link: '/modeling/ods-dwd-dws-ads' },
     { text: '维度建模', link: '/modeling/dimension-modeling' },
+    { text: '变化维表字段与 DWS', link: '/modeling/dws-changing-dimension' },
     { text: '数据域划分', link: '/modeling/data-domain' },
     { text: '宽表设计', link: '/modeling/wide-table' }
   ]
@@ -80,6 +81,7 @@ const governanceSidebar = {
   text: '数据治理',
   items: [
     { text: '数据治理概览', link: '/governance/' },
+    { text: '数据治理落地推进', link: '/governance/data-governance-process' },
     { text: '元数据管理', link: '/governance/metadata' },
     { text: '血缘分析', link: '/governance/lineage' },
     { text: '数据质量', link: '/governance/quality' },
