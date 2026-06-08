@@ -4,17 +4,17 @@
 
 数据治理不是一次性治理所有表，而是优先治理核心业务链路。推进顺序可以概括为：
 
-<div class="flow-strip">
-  <span>明确目标</span>
-  <span>资产盘点</span>
-  <span>血缘梳理</span>
-  <span>标准制定</span>
-  <span>质量规则</span>
-  <span>优先级治理</span>
-  <span>监控告警</span>
-  <span>问题闭环</span>
-  <span>持续运营</span>
-</div>
+```mermaid
+flowchart LR
+    A["明确目标"] --> B["资产盘点"];
+    B --> C["血缘梳理"];
+    C --> D["标准制定"];
+    D --> E["质量规则"];
+    E --> F["优先级治理"];
+    F --> G["监控告警"];
+    G --> H["问题闭环"];
+    H --> I["持续运营"];
+```
 
 治理的目标是让数据做到：
 
@@ -67,14 +67,16 @@
 
 典型链路如下：
 
-<div class="flow-strip">
-  <span>源系统 / Kafka / Flink CDC</span>
-  <span>ODS 原始层</span>
-  <span>DWD 明细层</span>
-  <span>DIM / DWS</span>
-  <span>ADS 应用层</span>
-  <span>BI / 报表 / 数据服务</span>
-</div>
+```mermaid
+flowchart TD
+    A["源系统 / Kafka / Flink CDC"] --> B["ODS 原始层"];
+    B --> C["DWD 明细层"];
+    C --> D["DIM 维度层"];
+    C --> E["DWS 汇总层"];
+    D --> E;
+    E --> F["ADS 应用层"];
+    F --> G["BI / 报表 / 数据服务"];
+```
 
 如果经营看板 GMV 异常下降，问题可能不在 ADS 表本身，而在更上游：
 
@@ -165,13 +167,13 @@ WHERE dt = '${bizdate}'
 
 排查数据治理问题时，不要只盯最终报表，要沿血缘逐层定位。
 
-<div class="flow-strip">
-  <span>ADS 看板异常</span>
-  <span>DWS 汇总是否正确</span>
-  <span>DWD 明细是否完整</span>
-  <span>ODS 分区是否产出</span>
-  <span>源系统 / CDC / Kafka 是否正常</span>
-</div>
+```mermaid
+flowchart LR
+    A["ADS 看板异常"] --> B["DWS 汇总是否正确"];
+    B --> C["DWD 明细是否完整"];
+    C --> D["ODS 分区是否产出"];
+    D --> E["源系统 / CDC / Kafka 是否正常"];
+```
 
 排查顺序：
 
@@ -197,15 +199,15 @@ WHERE dt = '${bizdate}';
 
 严重异常可以阻断任务，一般异常做告警。关键不是“发现问题”本身，而是发现后能定位、修复、重跑、通知和复盘。
 
-<div class="flow-strip">
-  <span>质量规则发现异常</span>
-  <span>告警通知负责人</span>
-  <span>根据血缘定位上游原因</span>
-  <span>修复任务或数据</span>
-  <span>重跑受影响分区</span>
-  <span>通知下游影响范围</span>
-  <span>复盘并补充规则</span>
-</div>
+```mermaid
+flowchart LR
+    A["质量规则发现异常"] --> B["告警通知负责人"];
+    B --> C["根据血缘定位上游原因"];
+    C --> D["修复任务或数据"];
+    D --> E["重跑受影响分区"];
+    E --> F["通知下游影响范围"];
+    F --> G["复盘并补充规则"];
+```
 
 可监控的指标包括：
 
