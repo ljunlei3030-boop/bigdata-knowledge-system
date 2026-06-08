@@ -13,16 +13,23 @@
 
 决策流程可以这样判断：
 
-```mermaid
-flowchart TD
-    A["维表字段是否高频使用"] --> B{"字段是否会变化"};
-    B -- "不变化" --> C["可沉淀到 DWS"];
-    B -- "会变化" --> D{"下游口径是否统一"};
-    D -- "统一" --> E["按时间语义谨慎沉淀"];
-    D -- "不统一" --> F["DWS 保留维度键"];
-    F --> G["下游按需 Join 快照表或拉链表"];
-    E --> H["字段名表达口径"];
-```
+<div class="decision-flow">
+  <div class="decision-node">维表字段是否高频使用</div>
+  <div class="decision-branch">
+    <div>
+      <strong>字段不变化</strong>
+      <span>可沉淀到 DWS</span>
+    </div>
+    <div>
+      <strong>字段会变化，口径统一</strong>
+      <span>按时间语义谨慎沉淀，字段名表达口径</span>
+    </div>
+    <div>
+      <strong>字段会变化，口径不统一</strong>
+      <span>DWS 保留维度键，下游按需 Join 快照表或拉链表</span>
+    </div>
+  </div>
+</div>
 
 ## 1. DWS 层的定位
 

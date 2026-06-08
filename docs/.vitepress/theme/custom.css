@@ -195,6 +195,87 @@
   height: auto;
 }
 
+.flow-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 26px;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}
+
+.flow-strip span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 14px;
+  border: 1px solid rgba(15, 118, 110, 0.24);
+  border-radius: 8px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.flow-strip span:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -13px;
+  color: var(--vp-c-text-3);
+  font-weight: 700;
+}
+
+.decision-flow {
+  margin: 20px 0 26px;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}
+
+.decision-node {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--vp-c-bg);
+  background: var(--vp-c-brand-1);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.decision-branch {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.decision-branch div {
+  padding: 14px;
+  border: 1px solid rgba(15, 118, 110, 0.24);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+}
+
+.decision-branch strong,
+.decision-branch span {
+  display: block;
+}
+
+.decision-branch strong {
+  margin-bottom: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.decision-branch span {
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 @media (max-width: 640px) {
   .VPHomeHero .container {
     padding-top: 34px;
@@ -211,7 +292,8 @@
 
   .knowledge-grid,
   .path-grid,
-  .question-list {
+  .question-list,
+  .decision-branch {
     grid-template-columns: 1fr;
   }
 
